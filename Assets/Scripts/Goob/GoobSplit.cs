@@ -3,6 +3,7 @@
 /// <summary>
 ///   Handles the splitting of the Goob. This is controlled by the mouse.
 /// </summary>
+[RequireComponent(typeof (GoobMove))]
 public class GoobSplit : MonoBehaviour {
   #region Methods
 
@@ -10,7 +11,6 @@ public class GoobSplit : MonoBehaviour {
     // check the mouse
     if (!mHold && Input.GetButtonDown("Mouse 0")) {
       mHold = true;
-      Debug.Log("Pressed");
     }
   }
 
@@ -18,7 +18,14 @@ public class GoobSplit : MonoBehaviour {
     // check the mouse
     if (mHold && Input.GetButtonUp("Mouse 0")) {
       mHold = false;
-      Debug.Log("Released");
+
+      // create another goob
+      GameObject anotherGoob = Instantiate(gameObject);
+
+      // start moving towards the mouse
+
+      // instruct the other one to move in other direction
+
     }
   }
 

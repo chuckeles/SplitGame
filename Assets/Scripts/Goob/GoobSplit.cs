@@ -5,4 +5,8 @@
 /// </summary>
 public class GoobSplit : MonoBehaviour {
 
+  public void OnMouseOver() {
+    Debug.Log("The mouse is over!");
+  }
+
 }

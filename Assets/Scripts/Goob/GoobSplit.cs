@@ -4,8 +4,7 @@
 ///   Handles the splitting of the Goob. This is controlled by the mouse.
 /// </summary>
 public class GoobSplit : MonoBehaviour {
-
-  private bool mHold = false;
+  #region Methods
 
   public void OnMouseOver() {
     // check the mouse
@@ -19,4 +18,11 @@ public class GoobSplit : MonoBehaviour {
     }
   }
 
+  #endregion
+
+  #region Fields
+
+  private bool mHold;
+
+  #endregion
 }

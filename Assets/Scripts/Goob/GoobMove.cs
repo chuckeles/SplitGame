@@ -27,7 +27,20 @@ public class GoobMove : MonoBehaviour {
     mMovementDirection = MovementDirection.None;
   }
 
+  /// <summary>
+  ///   Stops the goob and moves it to previous position.
+  /// </summary>
+  public void StopAndPrevious() {
+    Stop();
+
+    // move to previous position
+    transform.position = mPreviousPosition;
+  }
+
   public void Update() {
+    // update previous position
+    mPreviousPosition = transform.position;
+
     // move the goob
     switch (mMovementDirection) {
       case MovementDirection.Up:
@@ -57,6 +70,9 @@ public class GoobMove : MonoBehaviour {
 
   // actual movement of the goob
   private MovementDirection mMovementDirection = MovementDirection.None;
+
+  // previous position
+  private Vector3 mPreviousPosition;
 
   #endregion
 }

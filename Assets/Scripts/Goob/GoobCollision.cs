@@ -11,7 +11,7 @@ public class GoobCollision : MonoBehaviour {
     // is it a wall?
     if (collision.tag == "Wall") {
       // stop
-      GetComponent<GoobMove>().StopAndPrevious();
+      GetComponent<GoobMove>().StopAndAlign();
     }
   }
 

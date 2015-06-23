@@ -37,6 +37,17 @@ public class GoobMove : MonoBehaviour {
     transform.position = mPreviousPosition;
   }
 
+  /// <summary>
+  /// Stops the goob and aligns it to a 1x1 grid.
+  /// </summary>
+  public void StopAndAlign() {
+    Stop();
+
+    // align
+    Vector3 newPosition = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
+    transform.position = newPosition;
+  }
+
   public void Update() {
     // update previous position
     mPreviousPosition = transform.position;
@@ -66,7 +77,7 @@ public class GoobMove : MonoBehaviour {
   #region Fields
 
   // movement speed of the goob
-  public float MovementSpeed = 1f;
+  public float MovementSpeed = 2f;
 
   // actual movement of the goob
   private MovementDirection mMovementDirection = MovementDirection.None;

@@ -4,6 +4,14 @@
 ///   Handles the goob movement and collisions.
 /// </summary>
 public class GoobMove : MonoBehaviour {
+  #region Constructor
+
+  public GoobMove() {
+    MovementDirection = MovementDirection.None;
+  }
+
+  #endregion
+
   #region Methods
 
   /// <summary>
@@ -18,10 +26,6 @@ public class GoobMove : MonoBehaviour {
 
     // start moving in the direction
     MovementDirection = movementDirection;
-  }
-
-  public void Start() {
-    MovementDirection = MovementDirection.None;
   }
 
   /// <summary>

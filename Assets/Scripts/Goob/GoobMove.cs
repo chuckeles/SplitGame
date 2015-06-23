@@ -28,6 +28,18 @@ public class GoobMove : MonoBehaviour {
   }
 
   /// <summary>
+  ///   Stops the goob and aligns it to a 1x1 grid.
+  /// </summary>
+  public void StopAndAlign() {
+    Stop();
+
+    // align
+    var newPosition = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y),
+                                  transform.position.z);
+    transform.position = newPosition;
+  }
+
+  /// <summary>
   ///   Stops the goob and moves it to previous position.
   /// </summary>
   public void StopAndPrevious() {
@@ -35,17 +47,6 @@ public class GoobMove : MonoBehaviour {
 
     // move to previous position
     transform.position = mPreviousPosition;
-  }
-
-  /// <summary>
-  /// Stops the goob and aligns it to a 1x1 grid.
-  /// </summary>
-  public void StopAndAlign() {
-    Stop();
-
-    // align
-    Vector3 newPosition = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
-    transform.position = newPosition;
   }
 
   public void Update() {
@@ -70,6 +71,17 @@ public class GoobMove : MonoBehaviour {
         transform.Translate(-MovementSpeed * Time.deltaTime, 0, 0);
         break;
     }
+  }
+
+  #endregion
+
+  #region Properties
+
+  /// <summary>
+  ///   Returns true if the goob is moving.
+  /// </summary>
+  public bool IsMoving {
+    get { return mMovementDirection != MovementDirection.None; }
   }
 
   #endregion

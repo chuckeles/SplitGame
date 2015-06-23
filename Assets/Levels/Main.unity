@@ -183,6 +183,7 @@ GameObject:
   - 212: {fileID: 1585065912}
   - 58: {fileID: 1585065915}
   - 114: {fileID: 1585065914}
+  - 114: {fileID: 1585065916}
   m_Layer: 0
   m_Name: Goob
   m_TagString: Untagged
@@ -252,3 +253,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .159999996
+--- !u!114 &1585065916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585065911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4559b6fa757c52046b9d4ce7f59864dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 1

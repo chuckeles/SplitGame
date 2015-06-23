@@ -8,6 +8,7 @@ public enum MovementDirection {
   Up,
   Right,
   Down,
-  Left
+  Left,
+  None
 
 }

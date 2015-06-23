@@ -14,6 +14,12 @@ public class GoobSplit : MonoBehaviour {
     }
   }
 
+  public void Start() {
+    // test requirements
+    if (GetComponent<GoobMove>() == null)
+      throw new MissingComponentException("GoobMove is required but not attached");
+  }
+
   public void Update() {
     // check the mouse
     if (mHold && Input.GetButtonUp("Mouse 0")) {
@@ -22,10 +28,14 @@ public class GoobSplit : MonoBehaviour {
       // create another goob
       GameObject anotherGoob = Instantiate(gameObject);
 
+      // get the direction to mouse
+      
+
       // start moving towards the mouse
+      GetComponent<GoobMove>().Move(MovementDirection.Right);
 
       // instruct the other one to move in other direction
-
+      anotherGoob.GetComponent<GoobMove>().Move(MovementDirection.Left);
     }
   }
 

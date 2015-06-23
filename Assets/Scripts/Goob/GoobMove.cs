@@ -20,6 +20,13 @@ public class GoobMove : MonoBehaviour {
     mMovementDirection = movementDirection;
   }
 
+  /// <summary>
+  ///   Stops the goob.
+  /// </summary>
+  public void Stop() {
+    mMovementDirection = MovementDirection.None;
+  }
+
   public void Update() {
     // move the goob
     switch (mMovementDirection) {

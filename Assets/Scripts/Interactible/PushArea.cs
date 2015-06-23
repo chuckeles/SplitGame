@@ -6,7 +6,7 @@
 public class PushArea : MonoBehaviour {
   #region Methods
 
-  public void OnTriggerEnter2D(Collider2D collision) {
+  public void OnTriggerStay2D(Collider2D collision) {
     // check it is goob
     if (collision.tag != "Goob")
       return;

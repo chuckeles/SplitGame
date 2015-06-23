@@ -12,6 +12,12 @@ public class Finish : MonoBehaviour {
 
     // set the is activated
     IsActivated = (goob && !goob.GetComponent<GoobMove>().IsMoving);
+
+    // activate / deactivate particle system
+    ParticleSystem particles = GetComponent<ParticleSystem>();
+
+    if (particles)
+      particles.enableEmission = IsActivated;
   }
 
   #endregion

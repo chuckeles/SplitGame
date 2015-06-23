@@ -58,6 +58,10 @@ public class Button : MonoBehaviour {
 
     // change sprite
     GetComponent<SpriteRenderer>().sprite = PressedButtonSprite;
+
+    // open the door
+    if (DoorToActivate)
+      DoorToActivate.Open();
   }
 
   #endregion

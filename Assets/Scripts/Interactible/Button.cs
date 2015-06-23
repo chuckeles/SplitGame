@@ -74,5 +74,8 @@ public class Button : MonoBehaviour {
   // sprite to use when pressed
   public Sprite PressedButtonSprite;
 
+  // door to activate on press
+  public Door DoorToActivate;
+
   #endregion
 }

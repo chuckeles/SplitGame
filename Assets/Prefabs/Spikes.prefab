@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3470e29d0b121db41b8c6564195b0511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blood: {fileID: 152130, guid: 4bdd604542ed83143aaa6d4b29aded21, type: 2}
 --- !u!212 &21298220
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -95,6 +96,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Blood
+      value: 
+      objectReference: {fileID: 152130, guid: 4bdd604542ed83143aaa6d4b29aded21, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114486}

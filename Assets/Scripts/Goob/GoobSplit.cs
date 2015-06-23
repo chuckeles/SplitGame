@@ -35,7 +35,7 @@ public class GoobSplit : MonoBehaviour {
       GameObject anotherGoob = Instantiate(gameObject);
 
       // set parent
-      anotherGoob.transform.parent = GameObject.Find("Goobs").transform;
+      anotherGoob.transform.parent = transform.parent;
 
       // get mouse position
       Vector2 mousePosition = Input.mousePosition;

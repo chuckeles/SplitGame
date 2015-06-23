@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11437272}
   m_Layer: 0
   m_Name: Goob
-  m_TagString: Untagged
+  m_TagString: Goob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +136,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: MovementSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Goob
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

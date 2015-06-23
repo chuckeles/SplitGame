@@ -11,6 +11,12 @@ public class GoobSplit : MonoBehaviour {
     // check the mouse
     if (!mHold && Input.GetButtonDown("Mouse 0")) {
       mHold = true;
+
+      // set the position
+      mMouseClickPosition = Input.mousePosition;
+
+      // adjust to world coords
+      mMouseClickPosition = MainCameraSingleton.Instance.GetComponent<Camera>().ScreenToWorldPoint(mMouseClickPosition);
     }
   }
 
@@ -28,14 +34,32 @@ public class GoobSplit : MonoBehaviour {
       // create another goob
       GameObject anotherGoob = Instantiate(gameObject);
 
-      // get the direction to mouse
-      
+      // get mouse position
+      Vector2 mousePosition = Input.mousePosition;
+
+      // adjust to world coords
+      mousePosition = MainCameraSingleton.Instance.GetComponent<Camera>().ScreenToWorldPoint(mousePosition);
+
+      // get delta
+      Vector2 mouseDelta = mousePosition - mMouseClickPosition;
+
+      // get the direction
+      MovementDirection direction;
+      if (Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)) {
+        // horizontal
+        direction = MovementDirection.Right;
+      }
+      else {
+        // vertical
+        direction = MovementDirection.Up;
+      }
 
       // start moving towards the mouse
-      GetComponent<GoobMove>().Move(MovementDirection.Right);
+      GetComponent<GoobMove>().Move(direction);
 
       // instruct the other one to move in other direction
-      anotherGoob.GetComponent<GoobMove>().Move(MovementDirection.Left);
+      anotherGoob.GetComponent<GoobMove>()
+        .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
     }
   }
 
@@ -44,6 +68,7 @@ public class GoobSplit : MonoBehaviour {
   #region Fields
 
   private bool mHold;
+  private Vector2 mMouseClickPosition;
 
   #endregion
 }

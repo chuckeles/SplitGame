@@ -168,6 +168,7 @@ GameObject:
   - 222: {fileID: 552214109}
   - 114: {fileID: 552214108}
   - 114: {fileID: 552214107}
+  - 114: {fileID: 552214111}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -213,7 +214,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 552214108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 552214111}
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &552214108
@@ -261,6 +273,17 @@ RectTransform:
   m_AnchoredPosition: {x: -92, y: 26}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &552214111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552214106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806400b6ee26ff045b9071a134012747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &646929464
 Prefab:
   m_ObjectHideFlags: 0

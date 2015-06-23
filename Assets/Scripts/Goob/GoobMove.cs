@@ -4,6 +4,14 @@
 ///   Handles the goob movement and collisions.
 /// </summary>
 public class GoobMove : MonoBehaviour {
+  #region Constructor
+
+  public GoobMove() {
+    MovementDirection = MovementDirection.None;
+  }
+
+  #endregion
+
   #region Methods
 
   /// <summary>
@@ -11,20 +19,20 @@ public class GoobMove : MonoBehaviour {
   /// </summary>
   /// <param name="movementDirection">Desired movement direction</param>
   public void Move(MovementDirection movementDirection) {
-    if (mMovementDirection != MovementDirection.None) {
+    if (MovementDirection != MovementDirection.None) {
       // we are already moving
       return;
     }
 
     // start moving in the direction
-    mMovementDirection = movementDirection;
+    MovementDirection = movementDirection;
   }
 
   /// <summary>
   ///   Stops the goob.
   /// </summary>
   public void Stop() {
-    mMovementDirection = MovementDirection.None;
+    MovementDirection = MovementDirection.None;
   }
 
   /// <summary>
@@ -54,7 +62,7 @@ public class GoobMove : MonoBehaviour {
     mPreviousPosition = transform.position;
 
     // move the goob
-    switch (mMovementDirection) {
+    switch (MovementDirection) {
       case MovementDirection.Up:
         transform.Translate(0, MovementSpeed * Time.deltaTime, 0);
         break;
@@ -81,8 +89,13 @@ public class GoobMove : MonoBehaviour {
   ///   Returns true if the goob is moving.
   /// </summary>
   public bool IsMoving {
-    get { return mMovementDirection != MovementDirection.None; }
+    get { return MovementDirection != MovementDirection.None; }
   }
+
+  /// <summary>
+  ///   Returns the movement direction of the goob.
+  /// </summary>
+  public MovementDirection MovementDirection { get; private set; }
 
   #endregion
 
@@ -90,9 +103,6 @@ public class GoobMove : MonoBehaviour {
 
   // movement speed of the goob
   public float MovementSpeed = 2f;
-
-  // actual movement of the goob
-  private MovementDirection mMovementDirection = MovementDirection.None;
 
   // previous position
   private Vector3 mPreviousPosition;

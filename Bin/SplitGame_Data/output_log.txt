@@ -1,0 +1,136 @@
+Initialize engine version: 5.1.0f3 (ec70b008569d)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 770M (ID=0x11e0)
+    Vendor:   NVIDIA
+    VRAM:     2980 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.039 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.dll (this message is harmless)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 14.207551 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 236.
+Total: 0.670562 ms (FindLiveObjects: 0.046614 ms CreateObjectMapping: 0.035067 ms MarkObjects: 0.570919 ms  DeleteObjects: 0.016250 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.321453 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 256.
+Total: 0.620954 ms (FindLiveObjects: 0.040199 ms CreateObjectMapping: 0.032074 ms MarkObjects: 0.534140 ms  DeleteObjects: 0.013684 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.352672 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 256.
+Total: 0.710762 ms (FindLiveObjects: 0.081254 ms CreateObjectMapping: 0.041910 ms MarkObjects: 0.569636 ms  DeleteObjects: 0.014967 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.652886 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 256.
+Total: 0.724019 ms (FindLiveObjects: 0.052173 ms CreateObjectMapping: 0.032074 ms MarkObjects: 0.623093 ms  DeleteObjects: 0.015395 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.329579 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 256.
+Total: 0.729579 ms (FindLiveObjects: 0.051746 ms CreateObjectMapping: 0.032074 ms MarkObjects: 0.626514 ms  DeleteObjects: 0.016678 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.565644 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 260.
+Total: 0.751817 ms (FindLiveObjects: 0.058161 ms CreateObjectMapping: 0.039771 ms MarkObjects: 0.636778 ms  DeleteObjects: 0.015395 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.401425 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 336.
+Total: 0.769351 ms (FindLiveObjects: 0.059016 ms CreateObjectMapping: 0.046186 ms MarkObjects: 0.646614 ms  DeleteObjects: 0.014967 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.675979 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 279.
+Total: 0.693656 ms (FindLiveObjects: 0.052173 ms CreateObjectMapping: 0.033784 ms MarkObjects: 0.590163 ms  DeleteObjects: 0.015395 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.358659 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 279.
+Total: 0.733428 ms (FindLiveObjects: 0.057305 ms CreateObjectMapping: 0.033357 ms MarkObjects: 0.624803 ms  DeleteObjects: 0.015395 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.477975 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 279.
+Total: 0.741981 ms (FindLiveObjects: 0.069707 ms CreateObjectMapping: 0.036350 ms MarkObjects: 0.617106 ms  DeleteObjects: 0.016678 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.395437 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 278.
+Total: 0.744974 ms (FindLiveObjects: 0.055595 ms CreateObjectMapping: 0.033784 ms MarkObjects: 0.616678 ms  DeleteObjects: 0.036778 ms)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+
+Level '' (7) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 290)
+

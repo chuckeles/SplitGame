@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11456176}
   - 114: {fileID: 11411236}
   - 114: {fileID: 11437272}
+  - 114: {fileID: 11478768}
   m_Layer: 0
   m_Name: Goob
   m_TagString: Goob
@@ -94,6 +95,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76182df120fa00f4c9d7f2242e66e329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11478768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9cdca4d1c7ff74a97e0cbdc72b634a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21249186

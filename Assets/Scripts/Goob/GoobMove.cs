@@ -45,21 +45,13 @@ public class GoobMove : MonoBehaviour {
     var newPosition = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y),
                                   transform.position.z);
     transform.position = newPosition;
-  }
 
-  /// <summary>
-  ///   Stops the goob and moves it to previous position.
-  /// </summary>
-  public void StopAndPrevious() {
-    Stop();
-
-    // move to previous position
-    transform.position = mPreviousPosition;
+    // check my position for other goobs
+    CheckGoobs();
   }
 
   public void Update() {
     // update previous position
-    mPreviousPosition = transform.position;
 
     // move the goob
     switch (MovementDirection) {
@@ -78,6 +70,35 @@ public class GoobMove : MonoBehaviour {
       case MovementDirection.Left:
         transform.Translate(-MovementSpeed * Time.deltaTime, 0, 0);
         break;
+    }
+  }
+
+  /// <summary>
+  ///   Checks the position for other stationary goobs.
+  /// </summary>
+  private void CheckGoobs() {
+    // get goobs
+    GameObject[] goobs = GameObject.FindGameObjectsWithTag("Goob");
+
+    // check them
+    foreach (GameObject goob in goobs) {
+      // is it me?
+      if (goob == gameObject)
+        continue;
+
+      // is it moving?
+      if (goob.GetComponent<GoobMove>().IsMoving)
+        continue;
+
+      // check position
+      var deltaPos = new Vector2(Mathf.Abs(transform.position.x - goob.transform.position.x),
+                                 Mathf.Abs(transform.position.y - goob.transform.position.y));
+
+      if (Mathf.Max(deltaPos.x, deltaPos.y) < 0.2f) {
+        // same grid cell, self-destruction imminent
+        Destroy(gameObject);
+        break;
+      }
     }
   }
 
@@ -103,9 +124,6 @@ public class GoobMove : MonoBehaviour {
 
   // movement speed of the goob
   public float MovementSpeed = 2f;
-
-  // previous position
-  private Vector3 mPreviousPosition;
 
   #endregion
 }

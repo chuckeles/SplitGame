@@ -21,3 +21,5 @@ Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Analy
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.dll (this message is harmless)

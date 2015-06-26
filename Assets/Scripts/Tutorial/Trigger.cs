@@ -10,8 +10,11 @@ public class Trigger : MonoBehaviour {
     // check if it is a goob
     if (collision.tag == "Goob") {
       // update animations
-      AnimationToStop.Stop();
-      AnimationToStart.Play();
+      if (AnimationToStop)
+        AnimationToStop.CrossFade("End");
+
+      if (AnimationToStart)
+        AnimationToStart.Play();
     }
   }
 

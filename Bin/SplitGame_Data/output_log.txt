@@ -16,10 +16,16 @@ Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityE
 Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.041 seconds
+- Completed reload, in  0.040 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
 Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\Unity\SplitGame\Bin\SplitGame_Data\Managed\System.dll (this message is harmless)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 13.926154 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 243.
+Total: 0.706058 ms (FindLiveObjects: 0.049607 ms CreateObjectMapping: 0.032501 ms MarkObjects: 0.592302 ms  DeleteObjects: 0.028652 ms)
+

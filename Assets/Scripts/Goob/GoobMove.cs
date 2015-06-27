@@ -96,6 +96,12 @@ public class GoobMove : MonoBehaviour {
 
       if (Mathf.Max(deltaPos.x, deltaPos.y) < 0.2f) {
         // same grid cell, self-destruction imminent
+
+        // track merge event
+        var trackGoob = GetComponent<TrackGoob>();
+        if (trackGoob)
+          trackGoob.TrackMerge();
+
         Destroy(gameObject);
         break;
       }

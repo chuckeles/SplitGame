@@ -11,8 +11,14 @@ public class OffscreenDestroy : MonoBehaviour {
     Vector3 pos = MainCameraSingleton.Instance.GetComponent<Camera>().WorldToViewportPoint(transform.position);
 
     // check the position
-    if (Mathf.Max(Mathf.Abs(pos.x), Mathf.Abs(pos.y)) > 1.2f)
+    if (Mathf.Max(Mathf.Abs(pos.x), Mathf.Abs(pos.y)) > 1.2f) {
+      // track event
+      var trackGoob = GetComponent<TrackGoob>();
+      if (trackGoob)
+        trackGoob.TrackDestroy();
+
       Destroy(gameObject);
+    }
   }
 
   #endregion

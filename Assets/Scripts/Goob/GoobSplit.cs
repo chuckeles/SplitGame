@@ -54,10 +54,20 @@ public class GoobSplit : MonoBehaviour {
         if (Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)) {
           // horizontal
           direction = MovementDirection.Right;
+
+          // track event
+          var trackGoob = GetComponent<TrackGoob>();
+          if (trackGoob)
+            trackGoob.TrackSplit("horizontal");
         }
         else {
           // vertical
           direction = MovementDirection.Up;
+
+          // track event
+          var trackGoob = GetComponent<TrackGoob>();
+          if (trackGoob)
+            trackGoob.TrackSplit("vertical");
         }
 
         // start moving towards the mouse

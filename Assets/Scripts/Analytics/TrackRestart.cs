@@ -12,8 +12,9 @@ public class TrackRestart : MonoBehaviour {
   /// </summary>
   public void Track() {
     MainCameraSingleton.Instance.GetComponent<InitializeAnalytics>()
-      .Infinario.Track("restart", new Dictionary<string, object> {
-        {"level", Application.loadedLevelName}
+      .Infinario.Track("level", new Dictionary<string, object> {
+        {"action", "restart"},
+        {"name", Application.loadedLevelName}
       });
   }
 

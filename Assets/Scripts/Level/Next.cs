@@ -17,8 +17,15 @@ public class Next : MonoBehaviour {
     }
 
     // transition
-    if (weCanGo)
+    if (weCanGo) {
+      // track event
+      var trackComplete = GetComponent<TrackComplete>();
+      if (trackComplete)
+        trackComplete.Track();
+
+      // load next level
       Application.LoadLevel(Application.loadedLevel + 1);
+    }
   }
 
   #endregion

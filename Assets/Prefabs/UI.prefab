@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ca38fda670cf9489b4a5ec91c93112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NormalButtonColor: {r: .772058845, g: .772058845, b: .772058845, a: 1}
+  ReadyButtonColor: {r: .226785272, g: .801470578, b: .206260815, a: 1}
 --- !u!114 &11417090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -680,6 +682,38 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NormalButtonColor.r
+      value: .772058845
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NormalButtonColor.g
+      value: .772058845
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NormalButtonColor.b
+      value: .772058845
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ReadyButtonColor.r
+      value: .226785272
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ReadyButtonColor.g
+      value: .801470578
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ReadyButtonColor.b
+      value: .206260815
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NormalButtonColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ReadyButtonColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

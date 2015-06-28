@@ -11,7 +11,7 @@ public class Finish : MonoBehaviour {
     Collider2D goob = Physics2D.OverlapPoint(transform.position);
 
     // set the is activated
-    IsActivated = (goob && !goob.GetComponent<GoobMove>().IsMoving);
+    IsActivated = (goob && goob.tag == "Goob" && !goob.GetComponent<GoobMove>().IsMoving);
 
     // activate / deactivate particle system
     ParticleSystem particles = GetComponent<ParticleSystem>();

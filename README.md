@@ -1,5 +1,9 @@
 # SplitGame
 
+![GitHub Issues](https://img.shields.io/github/issues/chuckeles/SplitGame.svg?style=flat-square)
+![GitHub Release](https://img.shields.io/github/release/chuckeles/SplitGame.svg?style=flat-square)
+![Github Downloads](https://img.shields.io/github/downloads/chuckeles/SplitGame/latest/total.svg?style=flat-square)
+
 ## Info
 
 This is my private repository for the Split Game. It contains Unity project, all the source code and assets. Public repository [is located here](https://github.com/chuckeles/SplitGame).

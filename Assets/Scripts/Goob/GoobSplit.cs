@@ -1,81 +1,89 @@
 ﻿using UnityEngine;
 
-/// <summary>
-///   Handles the splitting of the Goob. This is controlled by the mouse.
-/// </summary>
-[RequireComponent(typeof (GoobMove))]
-public class GoobSplit : MonoBehaviour {
-  #region Methods
+namespace SplitGame {
 
-  public void OnMouseOver() {
-    // check the mouse
-    if (!mHold && Input.GetButtonDown("Mouse 0")) {
-      mHold = true;
+  /// <summary>
+  ///   Handles the splitting of the Goob. This is controlled by the mouse.
+  /// </summary>
+  [RequireComponent(typeof (Movable))]
+  public class GoobSplit : MonoBehaviour {
+    #region Methods
 
-      // set the position
-      mMouseClickPosition = Input.mousePosition;
+    public void OnMouseOver() {
+      // check the mouse
+      if (!mHold && Input.GetButtonDown("Mouse 0")) {
+        mHold = true;
 
-      // adjust to world coords
-      mMouseClickPosition = MainCameraSingleton.Instance.GetComponent<Camera>().ScreenToWorldPoint(mMouseClickPosition);
-    }
-  }
-
-  public void Start() {
-    // test requirements
-    if (GetComponent<GoobMove>() == null)
-      throw new MissingComponentException("GoobMove is required but not attached");
-  }
-
-  public void Update() {
-    // check the mouse
-    if (mHold && Input.GetButtonUp("Mouse 0")) {
-      mHold = false;
-
-      // check if we are stationary
-      if (!GetComponent<GoobMove>().IsMoving) {
-
-        // create another goob
-        GameObject anotherGoob = Instantiate(gameObject);
-
-        // set parent
-        anotherGoob.transform.parent = transform.parent;
-
-        // get mouse position
-        Vector2 mousePosition = Input.mousePosition;
+        // set the position
+        mMouseClickPosition = Input.mousePosition;
 
         // adjust to world coords
-        mousePosition = MainCameraSingleton.Instance.GetComponent<Camera>().ScreenToWorldPoint(mousePosition);
-
-        // get delta
-        Vector2 mouseDelta = mousePosition - mMouseClickPosition;
-
-        // get the direction
-        MovementDirection direction;
-        if (Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)) {
-          // horizontal
-          direction = MovementDirection.Right;
-        }
-        else {
-          // vertical
-          direction = MovementDirection.Up;
-        }
-
-        // start moving towards the mouse
-        GetComponent<GoobMove>().Move(direction);
-
-        // instruct the other one to move in other direction
-        anotherGoob.GetComponent<GoobMove>()
-          .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
+        mMouseClickPosition = mMainCamera.ScreenToWorldPoint(mMouseClickPosition);
       }
     }
+
+    public void Start() {
+      // test requirements
+      if (GetComponent<Movable>() == null)
+        throw new MissingComponentException("Movable is required but not attached");
+
+      // get the camera
+      mMainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
+
+    public void Update() {
+      // check the mouse
+      if (mHold && Input.GetButtonUp("Mouse 0")) {
+        mHold = false;
+
+        // check if we are stationary
+        if (!GetComponent<Movable>().IsMoving) {
+
+          // create another goob
+          GameObject anotherGoob = Instantiate(gameObject);
+
+          // set parent
+          anotherGoob.transform.parent = transform.parent;
+
+          // get mouse position
+          Vector2 mousePosition = Input.mousePosition;
+
+          // adjust to world coords
+          mousePosition = mMainCamera.ScreenToWorldPoint(mousePosition);
+
+          // get delta
+          Vector2 mouseDelta = mousePosition - mMouseClickPosition;
+
+          // get the direction
+          MovementDirection direction;
+          if (Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)) {
+            // horizontal
+            direction = MovementDirection.Right;
+          }
+          else {
+            // vertical
+            direction = MovementDirection.Up;
+          }
+
+          // start moving towards the mouse
+          GetComponent<Movable>().Move(direction);
+
+          // instruct the other one to move in other direction
+          anotherGoob.GetComponent<Movable>()
+            .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
+        }
+      }
+    }
+
+    #endregion
+
+    #region Fields
+
+    private bool mHold;
+    private Camera mMainCamera;
+    private Vector2 mMouseClickPosition;
+
+    #endregion
   }
 
-  #endregion
-
-  #region Fields
-
-  private bool mHold;
-  private Vector2 mMouseClickPosition;
-
-  #endregion
 }

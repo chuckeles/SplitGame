@@ -19,8 +19,8 @@
    inkscape:version="0.91 r13725"
    sodipodi:docname="Goob.svg"
    inkscape:export-filename="D:\Projects\Unity\SplitGameCode\Assets\Sprites\Goob\GoobShine.png"
-   inkscape:export-xdpi="396"
-   inkscape:export-ydpi="396">
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -63,7 +63,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.2360199"
-     inkscape:cx="97.430794"
+     inkscape:cx="30.570924"
      inkscape:cy="102.37075"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
@@ -87,7 +87,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

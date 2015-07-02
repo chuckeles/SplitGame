@@ -5,10 +5,10 @@ namespace SplitGame {
   /// <summary>
   ///   Handles the goob movement and collisions.
   /// </summary>
-  public class GoobMove : MonoBehaviour {
+  public class Movable : MonoBehaviour {
     #region Constructor
 
-    public GoobMove() {
+    public Movable() {
       MovementDirection = MovementDirection.None;
     }
 
@@ -89,7 +89,7 @@ namespace SplitGame {
           continue;
 
         // is it moving?
-        if (goob.GetComponent<GoobMove>().IsMoving)
+        if (goob.GetComponent<Movable>().IsMoving)
           continue;
 
         // check position

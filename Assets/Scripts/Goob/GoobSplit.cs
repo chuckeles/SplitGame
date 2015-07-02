@@ -5,7 +5,7 @@ namespace SplitGame {
   /// <summary>
   ///   Handles the splitting of the Goob. This is controlled by the mouse.
   /// </summary>
-  [RequireComponent(typeof (GoobMove))]
+  [RequireComponent(typeof (Movable))]
   public class GoobSplit : MonoBehaviour {
     #region Methods
 
@@ -24,8 +24,8 @@ namespace SplitGame {
 
     public void Start() {
       // test requirements
-      if (GetComponent<GoobMove>() == null)
-        throw new MissingComponentException("GoobMove is required but not attached");
+      if (GetComponent<Movable>() == null)
+        throw new MissingComponentException("Movable is required but not attached");
 
       // get the camera
       mMainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -37,7 +37,7 @@ namespace SplitGame {
         mHold = false;
 
         // check if we are stationary
-        if (!GetComponent<GoobMove>().IsMoving) {
+        if (!GetComponent<Movable>().IsMoving) {
 
           // create another goob
           GameObject anotherGoob = Instantiate(gameObject);
@@ -66,10 +66,10 @@ namespace SplitGame {
           }
 
           // start moving towards the mouse
-          GetComponent<GoobMove>().Move(direction);
+          GetComponent<Movable>().Move(direction);
 
           // instruct the other one to move in other direction
-          anotherGoob.GetComponent<GoobMove>()
+          anotherGoob.GetComponent<Movable>()
             .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
         }
       }

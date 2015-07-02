@@ -14,11 +14,6 @@ public class Destroyer : MonoBehaviour {
       blood.transform.parent = GameObject.Find("Blood").transform;
       blood.transform.position = collision.gameObject.transform.position;
 
-      // track destroy event
-      var trackGoob = GetComponent<TrackGoob>();
-      if (trackGoob)
-        trackGoob.TrackDestroy();
-
       // destroy it
       Destroy(collision.gameObject);
     }

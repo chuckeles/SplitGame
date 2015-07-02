@@ -1,9 +1,13 @@
-﻿/// <summary>
-///   Describes the split type of a goob.
-/// </summary>
-public enum SplitType {
+﻿namespace SplitGame {
 
-  Horizontal,
-  Vertical
+  /// <summary>
+  ///   Describes the split type of a goob.
+  /// </summary>
+  public enum SplitType {
+
+    Horizontal,
+    Vertical
+
+  }
 
 }

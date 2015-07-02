@@ -10,11 +10,6 @@ public class Next : MonoBehaviour {
   public void GoToNextLevel() {
     // transition
     if (mWeCanGo) {
-      // track event
-      var trackComplete = GetComponent<TrackComplete>();
-      if (trackComplete)
-        trackComplete.Track();
-
       // load next level
       Application.LoadLevel(Application.loadedLevel + 1);
     }

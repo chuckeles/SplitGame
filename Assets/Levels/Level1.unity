@@ -118,17 +118,17 @@ Transform:
   m_Children:
   - {fileID: 1281186058}
   - {fileID: 1149833629}
-  - {fileID: 791826185}
-  - {fileID: 1543777949}
   - {fileID: 534092154}
   - {fileID: 298796026}
-  - {fileID: 888727468}
-  - {fileID: 1482915370}
-  - {fileID: 297002230}
   - {fileID: 802248830}
-  - {fileID: 756563436}
   - {fileID: 2069256684}
   - {fileID: 2007258662}
+  - {fileID: 756563436}
+  - {fileID: 791826185}
+  - {fileID: 1543777949}
+  - {fileID: 1482915370}
+  - {fileID: 888727468}
+  - {fileID: 297002230}
   m_Father: {fileID: 1851658005}
   m_RootOrder: 0
 --- !u!1001 &297002229
@@ -168,11 +168,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: FinishLight
       objectReference: {fileID: 0}
     - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Sprite
@@ -223,7 +223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
@@ -658,7 +658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
@@ -788,20 +788,25 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -1.62920685e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: Line
       objectReference: {fileID: 0}
+    - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 23595ab0cbc84ad469ea7a05d5b52ead,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
   m_IsPrefabParent: 0
@@ -846,12 +851,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: Line
       objectReference: {fileID: 0}
+    - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 23595ab0cbc84ad469ea7a05d5b52ead,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
   m_IsPrefabParent: 0
@@ -896,7 +906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
@@ -946,11 +956,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: FinishLight
       objectReference: {fileID: 0}
     - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Sprite
@@ -1516,11 +1526,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Sprite
@@ -1571,12 +1581,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
-      value: Floor
+      value: Line
       objectReference: {fileID: 0}
+    - target: {fileID: 21205434, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4deda59ef38120046942c45747e689e0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
   m_IsPrefabParent: 0
@@ -1958,7 +1973,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name
@@ -2008,7 +2023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419822, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 185522, guid: 1e22cccc613d4274dbb8295bb0b7bbb7, type: 2}
       propertyPath: m_Name

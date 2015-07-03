@@ -108,6 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76182df120fa00f4c9d7f2242e66e329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHoldDistance: 3
+  MinHoldDistance: 1
+  MaxHoldScale: 1.39999998
+  MinHoldScale: .899999976
 --- !u!212 &21263882
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace SplitGame {
 
@@ -11,15 +12,16 @@ namespace SplitGame {
 
     public void OnMouseOver() {
       // check the mouse
-      if (!mHold && Input.GetButtonDown("Mouse 0")) {
-        mHold = true;
+      if (mHold || !Input.GetButtonDown("Mouse 0"))
+        return;
 
-        // set the position
-        mMouseClickPosition = Input.mousePosition;
+      mHold = true;
 
-        // adjust to world coords
-        mMouseClickPosition = mMainCamera.ScreenToWorldPoint(mMouseClickPosition);
-      }
+      // set the position
+      mMouseClickPosition = Input.mousePosition;
+
+      // adjust to world coords
+      mMouseClickPosition = mMainCamera.ScreenToWorldPoint(mMouseClickPosition);
     }
 
     public void Start() {
@@ -32,53 +34,99 @@ namespace SplitGame {
     }
 
     public void Update() {
+      CheckSplit();
+      ScaleGoob();
+    }
+
+    /// <summary>
+    ///   Checks the mouse and splits the goob if conditions are met.
+    /// </summary>
+    private void CheckSplit() {
       // check the mouse
-      if (mHold && Input.GetButtonUp("Mouse 0")) {
-        mHold = false;
+      if (!mHold || !Input.GetButtonUp("Mouse 0"))
+        return;
 
-        // check if we are stationary
-        if (!GetComponent<Movable>().IsMoving) {
+      mHold = false;
 
-          // create another goob
-          GameObject anotherGoob = Instantiate(gameObject);
+      // check if we are stationary
+      if (GetComponent<Movable>().IsMoving)
+        return;
 
-          // set parent
-          anotherGoob.transform.parent = transform.parent;
+      // create another goob
+      GameObject anotherGoob = Instantiate(gameObject);
 
-          // get mouse position
-          Vector2 mousePosition = Input.mousePosition;
+      // set parent
+      anotherGoob.transform.parent = transform.parent;
 
-          // adjust to world coords
-          mousePosition = mMainCamera.ScreenToWorldPoint(mousePosition);
+      // get mouse position
+      Vector2 mousePosition = Input.mousePosition;
 
-          // get delta
-          Vector2 mouseDelta = mousePosition - mMouseClickPosition;
+      // adjust to world coords
+      mousePosition = mMainCamera.ScreenToWorldPoint(mousePosition);
 
-          // get the direction
-          MovementDirection direction;
-          if (Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)) {
-            // horizontal
-            direction = MovementDirection.Right;
-          }
-          else {
-            // vertical
-            direction = MovementDirection.Up;
-          }
+      // get delta
+      Vector2 mouseDelta = mousePosition - mMouseClickPosition;
 
-          // start moving towards the mouse
-          GetComponent<Movable>().Move(direction);
+      // get the direction
+      MovementDirection direction = Mathf.Abs(mouseDelta.x) > Mathf.Abs(mouseDelta.y)
+                                      ? MovementDirection.Right
+                                      : MovementDirection.Up;
 
-          // instruct the other one to move in other direction
-          anotherGoob.GetComponent<Movable>()
-            .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
-        }
+      // start moving towards the mouse
+      GetComponent<Movable>().Move(direction);
+
+      // instruct the other one to move in other direction
+      anotherGoob.GetComponent<Movable>()
+        .Move(direction == MovementDirection.Right ? MovementDirection.Left : MovementDirection.Down);
+    }
+
+    /// <summary>
+    ///   Scales the goob according to the mouse position.
+    /// </summary>
+    private void ScaleGoob() {
+      if (!mHold) {
+        if (Math.Abs(transform.localScale.x - 1f) > float.Epsilon ||
+            Math.Abs(transform.localScale.y - 1f) > float.Epsilon)
+          transform.localScale = new Vector3(1f, 1f, transform.localScale.z);
+
+        return;
       }
+
+      // get mouse position
+      Vector2 mousePosition = Input.mousePosition;
+
+      // adjust to world coords
+      mousePosition = mMainCamera.ScreenToWorldPoint(mousePosition);
+
+      // get delta between the goob and the mouse
+      Vector2 delta = mousePosition - (Vector2) transform.position;
+
+      // adjust scale to 0 - 1
+      delta.x = Mathf.Abs(delta.x) - MinHoldDistance;
+      delta.y = Mathf.Abs(delta.y) - MinHoldDistance;
+      delta = delta / (MaxHoldDistance - MinHoldDistance);
+
+      // clamp
+      delta.x = Mathf.Clamp01(delta.x);
+      delta.y = Mathf.Clamp01(delta.y);
+
+      // adjust scale to min - max hold scale
+      delta *= (MaxHoldScale - MinHoldScale);
+      delta.x += MinHoldScale;
+      delta.y += MinHoldScale;
+
+      // set the scale
+      transform.localScale = new Vector3(delta.x, delta.y, transform.localScale.z);
     }
 
     #endregion
 
     #region Fields
 
+    public float MaxHoldDistance = 2f;
+    public float MinHoldDistance = .5f;
+    public float MaxHoldScale = 1.2f;
+    public float MinHoldScale = 1f;
     private bool mHold;
     private Camera mMainCamera;
     private Vector2 mMouseClickPosition;

@@ -41,6 +41,13 @@ namespace SplitGame {
     ///   Checks the mouse and splits the goob if conditions are met.
     /// </summary>
     private void CheckSplit() {
+      // check cancellation
+      if (mHold && Input.GetButton("Mouse 1")) {
+        mHold = false;
+
+        return;
+      }
+
       // check the mouse
       if (!mHold || !Input.GetButtonUp("Mouse 0"))
         return;

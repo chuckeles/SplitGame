@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleSpeedFriction: .0500000007
-  ScaleSpeedChangePercent: .100000001
+  ScaleSpeedChangePercent: 1.39999998
   TargetScale: {x: 1, y: 1}
 --- !u!212 &21263882
 SpriteRenderer:

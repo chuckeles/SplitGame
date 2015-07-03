@@ -84,6 +84,7 @@ namespace SplitGame {
     ///   Scales the goob according to the mouse position.
     /// </summary>
     private void ScaleGoob() {
+      // check if the mouse is holding the goob
       if (!mHold) {
         if (Math.Abs(transform.localScale.x - 1f) > float.Epsilon ||
             Math.Abs(transform.localScale.y - 1f) > float.Epsilon)
@@ -91,6 +92,11 @@ namespace SplitGame {
 
         return;
       }
+
+      // check if the goob is stationary
+      var movable = GetComponent<Movable>();
+      if (movable.IsMoving)
+        return;
 
       // get mouse position
       Vector2 mousePosition = Input.mousePosition;
@@ -124,8 +130,8 @@ namespace SplitGame {
     #region Fields
 
     public float MaxHoldDistance = 2f;
-    public float MinHoldDistance = .5f;
     public float MaxHoldScale = 1.2f;
+    public float MinHoldDistance = .5f;
     public float MinHoldScale = 1f;
     private bool mHold;
     private Camera mMainCamera;

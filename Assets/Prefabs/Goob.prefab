@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11437640}
   - 114: {fileID: 11448618}
   - 114: {fileID: 11468770}
+  - 114: {fileID: 11468886}
   m_Layer: 0
   m_Name: Goob
   m_TagString: Player
@@ -109,9 +110,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHoldDistance: 3
-  MinHoldDistance: 1
   MaxHoldScale: 1.39999998
-  MinHoldScale: .899999976
+  MinHoldDistance: 1
+  MinHoldScale: 1
+--- !u!114 &11468886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b9dcc32620acb438fb4c78dac2ff8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleSpeedFriction: .0500000007
+  ScaleSpeedChangePercent: .100000001
+  TargetScale: {x: 1, y: 1}
 --- !u!212 &21263882
 SpriteRenderer:
   m_ObjectHideFlags: 1

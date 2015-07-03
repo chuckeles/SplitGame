@@ -28,10 +28,10 @@ public class WobbleScale : MonoBehaviour {
 
   #region Fields
 
-  public Vector2 ScaleSpeed;
   public float ScaleSpeedFriction = 0.05f;
   public float ScaleSpeedChangePercent = 0.1f;
-  public Vector2 TargetScale;
+  public Vector2 TargetScale = new Vector2(1f, 1f);
+  private Vector2 ScaleSpeed;
 
   #endregion
 }

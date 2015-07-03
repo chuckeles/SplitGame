@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SplitGame {
 
   /// <summary>
   ///   Handles the splitting of the Goob. This is controlled by the mouse.
   /// </summary>
-  [RequireComponent(typeof (Movable))]
+  [RequireComponent(typeof (Movable)), RequireComponent(typeof (WobbleScale))]
   public class GoobSplit : MonoBehaviour {
     #region Methods
 
@@ -26,7 +25,7 @@ namespace SplitGame {
 
     public void Start() {
       // test requirements
-      if (GetComponent<Movable>() == null)
+      if (GetComponent<Movable>() == null || GetComponent<WobbleScale>() == null)
         throw new MissingComponentException("Movable is required but not attached");
 
       // get the camera
@@ -84,11 +83,12 @@ namespace SplitGame {
     ///   Scales the goob according to the mouse position.
     /// </summary>
     private void ScaleGoob() {
+      var wobbleScale = GetComponent<WobbleScale>();
+
       // check if the mouse is holding the goob
       if (!mHold) {
-        if (Math.Abs(transform.localScale.x - 1f) > float.Epsilon ||
-            Math.Abs(transform.localScale.y - 1f) > float.Epsilon)
-          transform.localScale = new Vector3(1f, 1f, transform.localScale.z);
+        wobbleScale.TargetScale.x = 1f;
+        wobbleScale.TargetScale.y = 1f;
 
         return;
       }
@@ -122,7 +122,8 @@ namespace SplitGame {
       delta.y += MinHoldScale;
 
       // set the scale
-      transform.localScale = new Vector3(delta.x, delta.y, transform.localScale.z);
+      wobbleScale.TargetScale.x = delta.x;
+      wobbleScale.TargetScale.y = delta.y;
     }
 
     #endregion

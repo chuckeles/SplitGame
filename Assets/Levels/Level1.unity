@@ -168,6 +168,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11468886, guid: a9eacc24160309b46b2ab9dcd9b60a53, type: 2}
+      propertyPath: ScaleSpeedChangePercent
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468886, guid: a9eacc24160309b46b2ab9dcd9b60a53, type: 2}
+      propertyPath: ScaleSpeedFriction
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9eacc24160309b46b2ab9dcd9b60a53, type: 2}
   m_IsPrefabParent: 0

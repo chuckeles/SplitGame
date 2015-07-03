@@ -80,7 +80,7 @@ namespace SplitGame {
     /// </summary>
     private void CheckGoobs() {
       // get goobs
-      GameObject[] goobs = GameObject.FindGameObjectsWithTag("Goob");
+      GameObject[] goobs = GameObject.FindGameObjectsWithTag("Player");
 
       // check them
       foreach (GameObject goob in goobs) {

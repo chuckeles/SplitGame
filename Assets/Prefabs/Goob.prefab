@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11468770}
   - 114: {fileID: 11468886}
   - 114: {fileID: 11412232}
+  - 114: {fileID: 11469020}
   m_Layer: 0
   m_Name: Goob
   m_TagString: Player
@@ -168,6 +169,18 @@ MonoBehaviour:
   ScaleSpeedFriction: .0500000007
   ScaleSpeedChangePercent: 1.39999998
   TargetScale: {x: 1, y: 1}
+--- !u!114 &11469020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ef9710d7ba90c4a9d8c75d95c62d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WobbleForce: 2
 --- !u!212 &21253656
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -229,6 +242,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Radius
       value: .49000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: WobbleForce
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

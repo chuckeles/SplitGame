@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1229409058ac1cb4db26db19a538ae4b
-timeCreated: 1435989482
+timeCreated: 1436262262
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -29,7 +29,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 32
+  maxTextureSize: 128
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -56,18 +56,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: On
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
